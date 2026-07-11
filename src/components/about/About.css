@@ -1,0 +1,36 @@
+.about {
+  padding: 100px 8%;
+  background: #ffffff;
+}
+
+.about-card {
+  background: #f4f9ff;
+  border: 1px solid #dbeafe;
+  border-radius: 28px;
+  padding: 60px;
+}
+
+.about-card h2 {
+  font-size: 44px;
+  color: #0f172a;
+}
+
+.about-card span {
+  display: block;
+  color: #1565c0;
+  font-weight: 800;
+  margin: 12px 0 22px;
+}
+
+.about-card p {
+  color: #64748b;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.about-list {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}

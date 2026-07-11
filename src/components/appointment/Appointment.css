@@ -1,0 +1,126 @@
+.appointment {
+  padding: 110px 8%;
+  background: linear-gradient(135deg, #1565c0, #0d47a1);
+  color: white;
+}
+
+.appointment-content {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.appointment-text span {
+  color: #bfdbfe;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.appointment-text h2 {
+  font-size: 48px;
+  margin: 18px 0;
+}
+
+.appointment-text p {
+  color: #dbeafe;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.appointment-text ul {
+  list-style: none;
+  margin-top: 30px;
+}
+
+.appointment-text li {
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.appointment-form {
+  background: white;
+  padding: 35px;
+  border-radius: 28px;
+  display: grid;
+  gap: 16px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.18);
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+  width: 100%;
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  padding: 16px;
+  font-family: inherit;
+  font-weight: 600;
+  outline: none;
+}
+
+.appointment-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.time-grid button {
+  height: 45px;
+  border: 1px solid #dbeafe;
+  background: #eaf3ff;
+  color: #1565c0;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.time-grid button:hover {
+  background: #1565c0;
+  color: white;
+}
+
+.submit-btn {
+  height: 55px;
+  border: none;
+  border-radius: 999px;
+  background: #1565c0;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+}
+.time-grid button.selected {
+  background: #1565c0;
+  color: white;
+}
+
+.time-grid button.disabled {
+  background: #e5e7eb;
+  color: #94a3b8;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.form-message {
+  color: #1565c0;
+  font-weight: 800;
+  text-align: center;
+}
+.appointment-warning {
+  padding: 13px 15px;
+  border-radius: 12px;
+  background: #fef3c7;
+  color: #92400e;
+  font-weight: 800;
+}
+
+.appointment-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
