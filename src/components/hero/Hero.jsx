@@ -1,6 +1,8 @@
 import "./Hero.css";
 
 function Hero() {
+  const doctorImage = `${import.meta.env.BASE_URL}images/doutora.jpg.jpeg`;
+
   return (
     <section className="hero">
       <div className="hero-content">
@@ -48,7 +50,7 @@ function Hero() {
 
         <div className="doctor-card">
           <img
-            src="/images/doutora.jpg.jpeg"
+            src={doctorImage}
             alt="Doutora responsável pelo atendimento"
           />
         </div>
