@@ -157,3 +157,18 @@
     font-size: 22px;
   }
 }
+.contact-svg {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.whatsapp-card .contact-icon,
+.instagram-card .contact-icon {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.location-card .contact-icon {
+  color: #1565c0;
+}

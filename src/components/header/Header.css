@@ -17,29 +17,44 @@
   margin: 0 auto;
   padding: 0 7%;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: minmax(190px, auto) 1fr auto;
   align-items: center;
-  gap: 30px;
+  gap: 28px;
 }
 
-.brand-mark {
-  width: 46px;
-  height: 46px;
+.header-brand {
+  padding: 0;
+  display: block;
   border: none;
-  border-radius: 15px;
-  background: #1565c0;
-  color: #ffffff;
-  font-size: 27px;
-  font-weight: 900;
+  background: transparent;
+  text-align: left;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(21, 101, 192, 0.24);
+}
+
+.header-brand strong,
+.header-brand span {
+  display: block;
+}
+
+.header-brand strong {
+  color: #1565c0;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.header-brand span {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .header-nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 27px;
+  gap: 26px;
 }
 
 .header-nav button {
@@ -99,21 +114,20 @@
   background: #1565c0;
 }
 
-/* Evita que o cabeçalho cubra o começo das seções */
-
 section[id] {
   scroll-margin-top: 105px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .header-content {
-    padding: 0 20px;
-    grid-template-columns: auto 1fr auto;
+    padding: 0 24px;
+    grid-template-columns: 1fr auto;
   }
 
   .menu-button {
     display: block;
-    grid-column: 3;
+    grid-column: 2;
+    grid-row: 1;
   }
 
   .desktop-whatsapp {
@@ -126,10 +140,10 @@ section[id] {
     top: 88px;
     left: 0;
     width: 100%;
-    padding: 24px 20px;
+    padding: 22px 20px;
     flex-direction: column;
     align-items: stretch;
-    gap: 8px;
+    gap: 7px;
     background: #ffffff;
     border-top: 1px solid #dbeafe;
     box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
@@ -155,5 +169,33 @@ section[id] {
     width: 100%;
     margin-top: 8px;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 82px;
+  }
+
+  .header-content {
+    padding: 0 16px;
+  }
+
+  .header-brand {
+    min-width: 0;
+    max-width: calc(100vw - 90px);
+  }
+
+  .header-brand strong {
+    font-size: 16px;
+    overflow-wrap: anywhere;
+  }
+
+  .header-brand span {
+    font-size: 10px;
+  }
+
+  .header-nav {
+    top: 82px;
   }
 }

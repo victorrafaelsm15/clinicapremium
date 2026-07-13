@@ -22,11 +22,12 @@ function Header() {
       <div className="header-content">
         <button
           type="button"
-          className="brand-mark"
+          className="header-brand"
           onClick={() => scrollToSection("inicio")}
           aria-label="Voltar ao início"
         >
-          +
+          <strong>Dra. Nome da Profissional</strong>
+          <span>Especialista em Emagrecimento</span>
         </button>
 
         <button
