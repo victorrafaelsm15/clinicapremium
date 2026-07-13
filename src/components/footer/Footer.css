@@ -44,3 +44,21 @@
   text-align: center;
   padding: 24px 0;
 }
+.footer button {
+  display: block;
+  margin-bottom: 14px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #cbd5e1;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.footer button:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}

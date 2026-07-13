@@ -154,3 +154,12 @@
     padding: 12px;
   }
 }
+.hero-buttons button {
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.hero-buttons .btn-secondary {
+  border: 1px solid #dbeafe;
+}

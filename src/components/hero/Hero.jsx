@@ -5,8 +5,19 @@ function Hero() {
     import.meta.env.BASE_URL
   }images/doutora.jpg.jpeg`;
 
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }
+
   return (
-    <section className="hero">
+    <section className="hero" id="inicio">
       <div className="hero-content">
         <div className="hero-text">
           <span>Atendimento profissional premium</span>
@@ -23,13 +34,21 @@ function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <a href="#agendamento" className="btn-primary">
+            <button
+              type="button"
+              className="btn-primary"
+              onClick={() => scrollToSection("agendamento")}
+            >
               Agendar consulta
-            </a>
+            </button>
 
-            <a href="#resultados" className="btn-secondary">
+            <button
+              type="button"
+              className="btn-secondary"
+              onClick={() => scrollToSection("resultados")}
+            >
               Ver resultados
-            </a>
+            </button>
           </div>
 
           <div className="hero-stats">
