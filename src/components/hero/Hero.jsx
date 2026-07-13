@@ -1,7 +1,9 @@
 import "./Hero.css";
 
 function Hero() {
-  const doctorImage = `${import.meta.env.BASE_URL}images/doutora.jpg.jpeg`;
+  const doctorImage = `${
+    import.meta.env.BASE_URL
+  }images/doutora.jpg.jpeg`;
 
   return (
     <section className="hero">

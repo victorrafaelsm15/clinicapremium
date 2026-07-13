@@ -1,91 +1,639 @@
-@media (max-width: 1100px) {
-  .hero,
-  .appointment-content,
-  .footer-content {
-    grid-template-columns: 1fr;
-  }
+/* =========================================================
+   RESPONSIVIDADE GLOBAL — CLÍNICA PREMIUM
+   Este arquivo deve ser importado por último no main.jsx
+========================================================= */
 
-  .services-grid,
-  .benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* ---------- CORREÇÕES GERAIS ---------- */
 
-  .results-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
+html {
+  width: 100%;
+  max-width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-@media (max-width: 780px) {
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+  font-family: inherit;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero-content,
+.about-content,
+.about-grid,
+.services-grid,
+.results-grid,
+.benefits-grid,
+.appointment-content,
+.contact-grid,
+.footer-content,
+.header-content {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  /* ---------- HEADER ---------- */
+
   .header {
-    height: auto;
-    padding: 20px 6%;
-    flex-direction: column;
-    gap: 20px;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
+  .header-content {
+    width: 100%;
   }
+
+  /* ---------- HERO ---------- */
 
   .hero {
-    padding: 190px 6% 70px;
-    grid-template-columns: 1fr;
+    padding-left: 6%;
+    padding-right: 6%;
   }
 
-  .hero h1 {
-    font-size: 38px;
+  .hero-content {
+    grid-template-columns: 1fr !important;
+    gap: 45px;
   }
 
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  .hero-numbers {
-    flex-direction: column;
-    gap: 20px;
+  .hero-text {
+    width: 100%;
   }
 
   .doctor-card {
-    height: 430px;
+    width: min(600px, 100%) !important;
+    margin: 0 auto;
   }
 
+  /* ---------- SOBRE ---------- */
+
+  .about-content,
+  .about-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ---------- SERVIÇOS ---------- */
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  /* ---------- RESULTADOS ---------- */
+
+  .results-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  /* ---------- BENEFÍCIOS ---------- */
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  /* ---------- AGENDAMENTO ---------- */
+
+  .appointment-content {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+  }
+
+  /* ---------- CONTATO ---------- */
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ---------- RODAPÉ ---------- */
+
+  .footer-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 780px) {
+  /* ---------- ESPAÇAMENTO DAS SEÇÕES ---------- */
+
+  .hero,
   .about,
   .services,
   .results,
   .benefits,
   .appointment,
   .contact {
-    padding: 80px 6%;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    overflow: hidden;
+  }
+
+  /* ---------- HEADER ---------- */
+
+  .header {
+    width: 100%;
+    padding: 16px 20px !important;
+  }
+
+  .header-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .logo,
+  .header-logo {
+    min-width: 0;
+    max-width: 70%;
+  }
+
+  .logo h2,
+  .header-logo h2 {
+    font-size: 18px !important;
+    overflow-wrap: anywhere;
+  }
+
+  .nav,
+  .header-nav {
+    display: none !important;
+  }
+
+  /* Caso exista um botão de WhatsApp no cabeçalho */
+  .header .btn-primary,
+  .header-whatsapp {
+    padding: 10px 14px !important;
+    font-size: 12px !important;
+    white-space: nowrap;
+  }
+
+  /* ---------- TÍTULOS GERAIS ---------- */
+
+  .section-title {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .section-title h2 {
+    font-size: 31px !important;
+    line-height: 1.18 !important;
+    overflow-wrap: anywhere;
+  }
+
+  .section-title p {
+    font-size: 16px !important;
+    line-height: 1.65;
+  }
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    min-height: auto !important;
+    padding-top: 125px !important;
+    padding-bottom: 65px !important;
+  }
+
+  .hero-content {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+    gap: 35px !important;
+  }
+
+  .hero-text {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-text span {
+    font-size: 11px !important;
+    letter-spacing: 1.4px !important;
+  }
+
+  .hero-text h1 {
+    width: 100%;
+    margin: 18px 0 !important;
+    font-size: clamp(34px, 9vw, 42px) !important;
+    line-height: 1.08 !important;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-text p {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px !important;
+    margin: 28px 0 !important;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px 18px !important;
+    text-align: center;
+  }
+
+  .hero-stats {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    border-radius: 18px !important;
+  }
+
+  .hero-stats div {
+    width: 100%;
+    padding: 19px !important;
+    border-right: none !important;
+    border-bottom: 1px solid #dbeafe;
+  }
+
+  .hero-stats div:last-child {
+    border-bottom: none;
+  }
+
+  .doctor-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 460px !important;
+    margin: 0 !important;
+    padding: 11px !important;
+    border-radius: 25px !important;
+  }
+
+  .doctor-card img {
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 19px !important;
+  }
+
+  /* ---------- SOBRE ---------- */
+
+  .about {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+
+  .about-content,
+  .about-grid,
+  .about-list {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .about-card,
+  .about-text,
+  .about-info {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
 
   .about-card {
-    padding: 34px;
+    padding: 24px 20px !important;
   }
 
   .about-card h2,
-  .section-title h2,
-  .appointment-text h2 {
-    font-size: 34px;
+  .about-text h2 {
+    font-size: 30px !important;
+    line-height: 1.18;
   }
 
-  .about-list,
-  .services-grid,
+  /* ---------- SERVIÇOS ---------- */
+
+  .services {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+
+  .services-grid {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .service-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding: 24px 20px !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+  }
+
+  .service-card h3,
+  .service-card p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  /* ---------- RESULTADOS ---------- */
+
+  .results {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+
+  .results-grid {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px !important;
+  }
+
+  .result-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden;
+  }
+
+  .result-card img {
+    width: 100% !important;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .result-info {
+    width: 100%;
+    padding: 20px !important;
+  }
+
+  .result-info h3,
+  .result-info p {
+    overflow-wrap: anywhere;
+  }
+
+  /* ---------- BENEFÍCIOS ---------- */
+
+  .benefits {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+
   .benefits-grid {
-    grid-template-columns: 1fr;
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .benefit-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    padding: 23px 20px !important;
+  }
+
+  /* ---------- AGENDAMENTO ---------- */
+
+  .appointment {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+
+  .appointment-content {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 32px !important;
+  }
+
+  .appointment-text,
+  .appointment-form {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .appointment-text h2 {
+    font-size: 31px !important;
+    line-height: 1.16;
+  }
+
+  .appointment-form {
+    padding: 24px 18px !important;
+    border-radius: 21px !important;
+  }
+
+  .appointment-form input,
+  .appointment-form select,
+  .appointment-form textarea,
+  .appointment-form button {
+    width: 100% !important;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .appointment-form input,
+  .appointment-form select {
+    min-height: 50px;
+  }
+
+  .appointment-form textarea {
+    min-height: 110px;
   }
 
   .time-grid {
-    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+  }
+
+  .time-grid button {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 5px !important;
+  }
+
+  /* ---------- CONTATO ---------- */
+
+  .contact {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+
+  .contact-grid {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px !important;
+  }
+
+  .contact-card,
+  .contact-info,
+  .map-placeholder {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .contact-card,
+  .contact-info {
+    padding: 23px 20px !important;
+  }
+
+  .contact-card h3,
+  .contact-card p,
+  .contact-info h3,
+  .contact-info p,
+  .contact-info a {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .map-placeholder {
+    min-height: 260px !important;
+    height: auto !important;
+    padding: 25px !important;
+    text-align: center;
+    font-size: 21px !important;
+  }
+
+  /* ---------- RODAPÉ ---------- */
+
+  .footer {
+    width: 100%;
+    max-width: 100%;
+    padding: 55px 20px 0 !important;
+    overflow: hidden;
   }
 
   .footer-content {
-    grid-template-columns: 1fr;
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 34px !important;
+    text-align: left !important;
+  }
+
+  .footer-content > div {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .footer h2,
+  .footer h3,
+  .footer p,
+  .footer a {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .footer-bottom {
+    width: 100%;
+    padding: 22px 0 !important;
     text-align: center;
+  }
+
+  /* ---------- BOTÕES FLUTUANTES ---------- */
+
+  .whatsapp-float,
+  .floating-whatsapp {
+    right: 15px !important;
+    bottom: 15px !important;
+    max-width: calc(100vw - 30px);
+  }
+}
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 390px) {
+  .hero,
+  .about,
+  .services,
+  .results,
+  .benefits,
+  .appointment,
+  .contact {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero-text h1 {
+    font-size: 32px !important;
+  }
+
+  .section-title h2,
+  .appointment-text h2,
+  .about-card h2,
+  .about-text h2 {
+    font-size: 28px !important;
+  }
+
+  .doctor-card {
+    height: 410px !important;
+  }
+
+  .time-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .appointment-form {
+    padding: 21px 15px !important;
   }
 }
